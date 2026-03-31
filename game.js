@@ -139,14 +139,15 @@ class Background {
   }
 
   draw(ctx) {
-    if (!this._img.complete) {
-      ctx.fillStyle = '#1a1a2e';
-      ctx.fillRect(0, 0, this._cw, this._ch);
-      return;
-    }
-    ctx.drawImage(this._img, this._x,              0, this._bw, this._ch);
-    ctx.drawImage(this._img, this._x + this._bw,   0, this._bw, this._ch);
+  if (!this._img || !this._img.complete || this._img.naturalWidth === 0) {
+    ctx.fillStyle = '#1a1a2e';
+    ctx.fillRect(0, 0, this._cw, this._ch);
+    return;
   }
+
+  ctx.drawImage(this._img, this._x, 0, this._bw, this._ch);
+  ctx.drawImage(this._img, this._x + this._bw, 0, this._bw, this._ch);
+}
 }
 
 // ═══════════════════════════════════════════
