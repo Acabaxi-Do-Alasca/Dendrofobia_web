@@ -24,7 +24,7 @@ const CFG = {
 
   bgWidth:        9800,          // largura do background em pixels nativos
 
-  musicDir:       'Músicas/',
+  musicDir:       'musicas/',
   musicFiles: [
     'back-in-black.mp3',         'Crazy-Train.mp3',
     'Enter-Sandman.mp3',         'Eye-Of-The-Tiger.mp3',
@@ -36,7 +36,7 @@ const CFG = {
     'Welcome-To-The-Jungle.mp3', 'You-Give-Love-A-Bad-Name.mp3',
   ],
 
-  imgDir: 'Imagens/',
+  imgDir: 'imagens/',
 };
 
 // ═══════════════════════════════════════════
