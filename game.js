@@ -124,7 +124,7 @@ class MusicManager {
 // ═══════════════════════════════════════════
 class Background {
   constructor(loader, canvasW, canvasH) {
-    this._img    = loader.load('fundo2.png');
+    this._img    = loader.load('Fundo2.png');
     this._cw     = canvasW;
     this._ch     = canvasH;
     // escala o background para cobrir a altura do canvas
@@ -139,14 +139,15 @@ class Background {
   }
 
   draw(ctx) {
-    if (!this._img.complete) {
-      ctx.fillStyle = '#1a1a2e';
-      ctx.fillRect(0, 0, this._cw, this._ch);
-      return;
-    }
-    ctx.drawImage(this._img, this._x,              0, this._bw, this._ch);
-    ctx.drawImage(this._img, this._x + this._bw,   0, this._bw, this._ch);
+  if (!this._img || !this._img.complete || this._img.naturalWidth === 0) {
+    ctx.fillStyle = '#1a1a2e';
+    ctx.fillRect(0, 0, this._cw, this._ch);
+    return;
   }
+
+  ctx.drawImage(this._img, this._x, 0, this._bw, this._ch);
+  ctx.drawImage(this._img, this._x + this._bw, 0, this._bw, this._ch);
+}
 }
 
 // ═══════════════════════════════════════════
@@ -500,7 +501,7 @@ class Game {
 
     // pré-carrega imagens antes de mostrar o start
     const allImgs = [
-      'fundo2.png','Dash.png','HitBoxDino.png','HitBoxArvore.png',
+      'Fundo2.png','Dash.png','HitBoxDino.png','HitBoxArvore.png',
       'game_over.png','exit.png',
       'Música-ON.png','Música-OFF.png',
       'dinosaur1.png','dinosaur2.png','dinosaur3.png',
