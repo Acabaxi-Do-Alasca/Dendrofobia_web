@@ -34,6 +34,7 @@ const CFG = {
     'Runnin-with-the-Devil.mp3', 'The-Trooper.mp3',
     'Thunderstruck.mp3',         'We-Will-Rock-You.mp3',
     'Welcome-To-The-Jungle.mp3', 'You-Give-Love-A-Bad-Name.mp3',
+    'Anesthesia.mp3',
   ],
 
   imgDir: 'imagens/',
