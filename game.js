@@ -124,7 +124,7 @@ class MusicManager {
 // ═══════════════════════════════════════════
 class Background {
   constructor(loader, canvasW, canvasH) {
-    this._img    = loader.load('fundo2.png');
+    this._img    = loader.load('Fundo2.png');
     this._cw     = canvasW;
     this._ch     = canvasH;
     // escala o background para cobrir a altura do canvas
