@@ -500,7 +500,7 @@ class Game {
 
     // pré-carrega imagens antes de mostrar o start
     const allImgs = [
-      'fundo2.png','Dash.png','HitBoxDino.png','HitBoxArvore.png',
+      'Fundo2.png','Dash.png','HitBoxDino.png','HitBoxArvore.png',
       'game_over.png','exit.png',
       'Música-ON.png','Música-OFF.png',
       'dinosaur1.png','dinosaur2.png','dinosaur3.png',
